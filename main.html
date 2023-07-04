@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="scripts.js"></script>
+    <title>Encriptador</title>
+</head>
+
+<body>
+
+    <header>
+        <img src="imagenes/Logo.png" alt="LogoEmpresa" />
+    </header>
+
+    <main class="main_area">
+        <!-- Area izquierda -->
+        <section class="area_izq">
+            <textarea id="area_texto" placeholder="Escribe la palabra..."></textarea>
+            <p>Solo letras minusculas/Solo una palabra</p>
+            <!-- BOTONES -->
+            <div class="contenedor_botones">
+                <button class="botonEncriptar" type="button" onclick="encriptarTexto()">Encriptar</button>
+                <button class="botonDesencriptar" type="button" onclick="desencriptarTexto()">Desencriptar</button>
+            </div>
+        </section>
+        <!-- Area derecha -->
+        <div class="area_dere">
+            <img id="imagen_areaIzq" src="imagenes/Muñeco.png" alt="Imagen de contenido">
+            <p id="area2-text1">No se ha encontrado ningún mensaje aún</p>
+            <p id="area2-text2" style="display: none;"></p>
+            <!-- BOTON COPIAR -->
+            <div class="contenedor_botones2">
+                <button id="botonCopiar" class="botonCopiar" type="button" onclick="copiarTexto()">Copiar</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
