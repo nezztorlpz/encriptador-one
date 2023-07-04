@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
     <title>Encriptador</title>
 </head>
 
@@ -18,8 +18,10 @@
     <main class="main_area">
         <!-- Area izquierda -->
         <section class="area_izq">
-            <textarea id="area_texto" placeholder="Escribe la palabra..."></textarea>
-            <p>Solo letras minúsculas/Solo una palabra</p>
+            <textarea id="area_texto" placeholder="Escribe la palabra..." maxlength="20"></textarea>
+            <!-- Este span muestra el número de caracteres disponibles en el área de texto -->
+            <p> Tienes <span id="contador"></span> caracteres para tu texto </p>
+            <p>Solo letras minúsculas</p>
             <!-- BOTONES -->
             <div class="contenedor_botones">
                 <button class="botonEncriptar" type="button" onclick="encriptarTexto()">Encriptar</button>
