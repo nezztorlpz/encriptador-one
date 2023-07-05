@@ -67,7 +67,23 @@ header img {
     font-family: Arial;
     font-size: 15px;
     font-weight: 700;
-    color: rgb(0, 0, 0);
+    color: rgb(11, 2, 92);
+}
+
+#soloMinusculas{
+    display: block;
+    margin-block-start: .1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#contadorCaracteres-texto{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: .1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 /*BOTONES*/
