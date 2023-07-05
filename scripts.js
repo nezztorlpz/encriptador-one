@@ -6,24 +6,20 @@ var contador = document.getElementById("contador");
 function procesarTexto(accion) {
   var texto = document.getElementById("area_texto").value;
   var areaTexto1 = document.getElementById("area2-text1");
-  // Obtenemos el elemento textarea
-  var areaDesencriptado = document.getElementById("area_desencriptado");
+  var areaTexto2 = document.getElementById("area2-text2");
   var imagen = document.getElementById("imagen_areaIzq");
   var botonCopiar = document.getElementById("botonCopiar");
 
   if (texto === "") {
     areaTexto1.style.display = "block";
-    // Ocultamos el textarea
-    areaDesencriptado.style.display = "none";
+    areaTexto2.style.display = "none";
     imagen.style.display = "block";
     botonCopiar.style.display = "none";
   } else {
     areaTexto1.style.display = "none";
     var resultado = (accion === "encriptar") ? encriptar(texto) : desencriptar(texto);
-    // Cambiamos el value del textarea con el resultado
-    areaDesencriptado.value = resultado;
-    // Mostramos el textarea
-    areaDesencriptado.style.display = "block";
+    areaTexto2.innerText = resultado;
+    areaTexto2.style.display = "block";
     imagen.style.display = "none";
     botonCopiar.style.display = "block";
   }
@@ -77,8 +73,7 @@ function desencriptar(textoEncriptado) {
 }
 
 function copiarTexto() {
-  // Obtenemos el value del textarea
-  var textoEncriptado = document.getElementById("area_desencriptado").value;
+  var textoEncriptado = document.getElementById("area2-text2").innerText;
   var textarea = document.createElement("textarea");
   textarea.value = textoEncriptado;
   document.body.appendChild(textarea);
@@ -87,3 +82,4 @@ function copiarTexto() {
   document.body.removeChild(textarea);
   alert("Texto encriptado copiado al portapapeles: " + textoEncriptado);
 }
+
