@@ -63,6 +63,10 @@ header img {
     color: white;
 }
 
+#area_texto {
+    text-transform: lowercase;
+}
+
 .area_izq p {
     font-family: Arial;
     font-size: 15px;
